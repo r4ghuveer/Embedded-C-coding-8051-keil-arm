@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  QUESTION1                                                            12/12/2022 12:47:07 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\question1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE question1.asm SET(SMALL) DEBUG PRINT(.\Listings\question1.lst) OBJECT(.
+                      \Objects\question1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 758055            1     Main: MOV p0, #01010101B
+0003 110C              2     CALL Delay1
+0005 7580AA            3     MOV p0, #10101010B 
+0008 1111              4     CALL Delay2 
+000A 80F4              5     JMP Main
+000C 78FF              6     Delay1: MOV r0, #255 
+000E D8FE              7     Here1: DJNZ r0, Here1 
+0010 22                8     RET
+0011 79FF              9     Delay2: MOV r1, #255 
+0013 D9FE             10     Here: DJNZ r1, Here 
+0015 22               11     RET
+                      12     end
+A51 MACRO ASSEMBLER  QUESTION1                                                            12/12/2022 12:47:07 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY1 . . . . . .  C ADDR   000CH   A   
+DELAY2 . . . . . .  C ADDR   0011H   A   
+HERE . . . . . . .  C ADDR   0013H   A   
+HERE1. . . . . . .  C ADDR   000EH   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

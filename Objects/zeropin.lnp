@@ -1,0 +1,3 @@
+".\Objects\zeropin.obj" 
+TO ".\Objects\zeropin" 
+PRINT(".\Listings\zeropin.m51")

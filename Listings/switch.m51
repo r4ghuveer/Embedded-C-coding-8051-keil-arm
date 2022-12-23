@@ -1,0 +1,116 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/23/2022  17:04:21  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\switch.obj TO .\Objects\switch PRINT (.\Listings\switch.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\switch.obj (SWITCH)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\switch (SWITCH)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?SWITCH
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?PR?MAIN?SWITCH
+            CODE    088CH     008CH     UNIT         ?C_C51STARTUP
+            CODE    0918H     0009H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\switch (SWITCH)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SWITCH
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\switch (SWITCH)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SWITCH
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  B:00A0H.0       PUBLIC        sw1
+  B:00A0H.1       PUBLIC        sw2
+  B:00A0H.2       PUBLIC        sw3
+  B:00A0H.3       PUBLIC        sw4
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/23/2022  17:04:21  PAGE 2
+
+
+  C:0800H         PUBLIC        main
+  B:0090H.0       PUBLIC        led1
+  D:0008H         PUBLIC        i
+  B:0090H.1       PUBLIC        led2
+  D:000AH         PUBLIC        j
+  B:0090H.2       PUBLIC        led3
+  B:0090H.3       PUBLIC        led4
+  -------         PROC          MAIN
+  C:0800H         LINE#         12
+  C:0800H         LINE#         13
+  C:0800H         LINE#         15
+  C:0803H         LINE#         16
+  C:0806H         LINE#         17
+  C:0806H         LINE#         18
+  C:0809H         LINE#         19
+  C:0809H         LINE#         20
+  C:080CH         LINE#         21
+  C:080EH         LINE#         22
+  C:0813H         LINE#         23
+  C:0828H         LINE#         24
+  C:0838H         LINE#         25
+  C:083AH         LINE#         26
+  C:084AH         LINE#         27
+  C:085FH         LINE#         28
+  C:0869H         LINE#         29
+  C:0869H         LINE#         30
+  C:0869H         LINE#         32
+  C:086CH         LINE#         33
+  C:086CH         LINE#         34
+  C:086EH         LINE#         35
+  C:0871H         LINE#         36
+  C:0871H         LINE#         37
+  C:0874H         LINE#         38
+  C:0874H         LINE#         39
+  C:0876H         LINE#         40
+  C:0879H         LINE#         41
+  C:0879H         LINE#         42
+  C:087CH         LINE#         43
+  C:087CH         LINE#         44
+  C:087EH         LINE#         45
+  C:0881H         LINE#         46
+  C:0881H         LINE#         47
+  C:0889H         LINE#         48
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SWITCH
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0094H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=292
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
